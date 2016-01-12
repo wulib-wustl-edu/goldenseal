@@ -1,8 +1,8 @@
-set :stage, :internal_build
+set :stage, :hydraprod
 set :rails_env, 'production'
 set :branch, ENV['BRANCH'] || 'master'
-set :deploy_to, '/opt/goldenseal'
-server 'localhost', user: 'deploy', roles: [:web, :app, :db, :resque_pool]
+set :ssh_options, { keys: "/home/deploy/.ssh/edu.wustl.wulib@deploy", forward_agent: true }
+server 'hydraprod.wulib.wustl.edu', user: 'deploy', roles: [:web, :app, :db, :resque_pool]
 
 # server-based syntax
 # ======================
@@ -42,8 +42,8 @@ server 'localhost', user: 'deploy', roles: [:web, :app, :db, :resque_pool]
 # Global options
 # --------------
 #  set :ssh_options, {
-#    keys: %w(/home/rlisowski/.ssh/id_rsa),
-#    forward_agent: false,
+#    keys: %w(/home/deploy/.ssh/edu.wustl.wulib@deploy),
+#    forward_agent: true,
 #    auth_methods: %w(password)
 #  }
 #

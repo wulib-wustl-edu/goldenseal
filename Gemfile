@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '4.2.4'
 
 group :production do
 # Use postgresql as the database for Active Record
@@ -12,7 +12,6 @@ gem 'therubyracer', platforms: :ruby
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -28,13 +27,16 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'curation_concerns', '~> 0.5.0'
+gem 'curation_concerns', '0.3.0' #github: 'projecthydra-labs/curation_concerns'
 
-gem 'resque-web', '~> 0.0.7', require: 'resque_web'
+# because the most recent release of resque-web is long out-of-date.
+# We need a newer version to get bootstrap 3 support:
+# https://github.com/resque/resque-web/issues/62
+gem 'resque-web', require: 'resque_web', github: 'resque/resque-web', ref: '389f448'
 gem 'resque'
-gem 'posix-spawn'
 
 gem 'hydra-file_characterization', '0.3.3'
+gem 'hydra-collections', '~> 6.0.0.rc1'
 gem 'riiif', '0.2.0'
 gem 'openseadragon', '~> 0.2.1'
 gem 'angularjs-rails', '~> 1.4.4'

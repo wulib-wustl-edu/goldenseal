@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :application, 'goldenseal'
-set :repo_url, 'https://github.com/curationexperts/goldenseal.git'
+set :repo_url, 'https://github.com/wulib-wustl-edu/goldenseal.git'
 set :passenger_restart_with_touch, true
 ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 set :deploy_to, '/opt/goldenseal'
@@ -14,7 +14,7 @@ set :deploy_to, '/opt/goldenseal'
 # set :format, :pretty
 
 # Default value for :log_level is :debug
-# set :log_level, :debug
+set :log_level, :debug
 
 # Default value for :pty is false
 # set :pty, true

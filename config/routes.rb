@@ -17,6 +17,9 @@ Rails.application.routes.draw do
     end
   end
 
+  # Eager load: https://github.com/resque/resque-web/issues/76
+  ResqueWeb::Engine.eager_load!
+
   resque_web_constraint = lambda do |request|
     current_user = request.env['warden'].user
     current_user.present? && current_user.respond_to?(:groups) && current_user.groups.include?('admin')

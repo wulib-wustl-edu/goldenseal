@@ -4,7 +4,6 @@ class Audio < ActiveFedora::Base
   include Metadata
   include InAdminSet
   include OnCampusAccess
-  include DrawTemplate
 
   validates :title, presence: { message: 'Your work must have a title.' }
 

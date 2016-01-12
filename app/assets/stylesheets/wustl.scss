@@ -1,0 +1,80 @@
+body {
+    padding: 0px;
+    header#banner hgroup {
+	div#brand-bar-wrapper {
+	    background-color: #a51417;
+	    background-image: none;
+	    border-bottom: none;
+	    border-top: #62121b 5px solid;
+	    padding: 0px 0px 5px 0px;
+	    margin: 0px;
+	    div.container div.university {
+		margin: 0px;
+		padding: 0px;
+		h1 {
+		    margin: 0px;
+		    padding: 0px;
+		}
+	    }
+	}
+	div#product-bar-wrapper {
+	    background: transparent url(image-path('header-shield.svg')) scroll left center no-repeat;
+	    border: none;
+	    height: 135px;
+	    display: table-cell;
+	    vertical-align: middle;
+	    padding-left: 70px;
+	    a {
+		color: #000;
+	    }
+	}
+	div#title-bar-wrapper {
+	    padding: 5px 0px;
+	    background-color: #555;
+	    background-image: none;
+	    border: 0;
+	    margin: 0;
+	    div#site-search form {
+		margin: 0px;
+		padding: 0px;
+	    }
+	    nav#site-actions {
+		padding-top: 0px;
+	    }
+	}
+    }
+    footer#footer {
+	margin: 30px 0 0 0;
+	width: auto;
+	text-align: left;
+	div#footer-top {
+	    background-color: #555;
+	    padding: 25px 75px;
+	    color: #fff;
+	    ul {
+		margin: 0px;
+		padding: 0px;
+		li {
+		    list-style-type: none;
+		    a {
+			color: #fff;
+			text-decoration: underline;
+		    }
+		    a:hover {
+			text-decoration: none;
+		    }
+		}
+	    }
+	}
+	div#footer-bottom {
+	    background-color: #a51417;
+	    border-top: 5px solid #721218;
+	    padding: 15px 75px;
+	    color: #fff;
+	    a {
+		color: #fff;
+		text-decoration: underline;
+	    }
+	}
+    }
+}

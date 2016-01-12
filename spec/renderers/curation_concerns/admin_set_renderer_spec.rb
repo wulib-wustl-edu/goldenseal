@@ -6,6 +6,6 @@ describe AdminSetRenderer do
     subject { renderer.render }
     it { is_expected.to eq "<tr><th>Collection</th>\n<td><ul class='tabular'>" \
          "<li class=\"attribute admin_set\">" \
-         "<a href=\"/admin_sets/123\">Title</a></li></ul></td></tr>" }
+         "<a href=\"/admin_sets/123\">Title</a></li>\n</ul></td></tr>" }
   end
 end

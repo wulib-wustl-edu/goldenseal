@@ -45,10 +45,9 @@ describe AdminSetsController do
     before { sign_in user }
     context "a non-admin" do
       let(:user) { create(:user) }
-      it "redirects to be unauthorized" do
+      it "redirects to home" do
         post :create, admin_set: { "title" => "Annie Leibovitz" }
-        expect(response.status).to eq 401
-        expect(response).to render_template('unauthorized')
+        expect(response).to redirect_to(root_path)
       end
     end
 

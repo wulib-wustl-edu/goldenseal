@@ -16,7 +16,6 @@ end
 def visibility_choices
   { 'open' => Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PUBLIC,
     'institution' => Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_AUTHENTICATED,
-    'on-campus' => OnCampusAccess::OnCampus,
     'private' => Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PRIVATE }
 end
 

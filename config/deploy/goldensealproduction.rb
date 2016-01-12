@@ -1,7 +1,8 @@
-set :stage, :aws
+set :stage, :goldensealproduction
 set :rails_env, 'production'
 set :branch, ENV['BRANCH'] || 'master'
-server 'wustl.curationexperts.com', user: 'deploy', roles: [:web, :app, :db, :resque_pool]
+set :ssh_options, { keys: "/home/deploy/.ssh/edu.wustl.wulib@deploy", forward_agent: true }
+server 'production-goldenseal.wulib.wustl.edu', user: 'deploy', roles: [:web, :app, :db, :resque_pool]
 
 # server-based syntax
 # ======================
@@ -41,8 +42,8 @@ server 'wustl.curationexperts.com', user: 'deploy', roles: [:web, :app, :db, :re
 # Global options
 # --------------
 #  set :ssh_options, {
-#    keys: %w(/home/rlisowski/.ssh/id_rsa),
-#    forward_agent: false,
+#    keys: %w(/home/deploy/.ssh/edu.wustl.wulib@deploy),
+#    forward_agent: true,
 #    auth_methods: %w(password)
 #  }
 #
