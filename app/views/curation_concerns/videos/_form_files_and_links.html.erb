@@ -7,8 +7,11 @@
     </div>
 
     <div class="row">
-      <fieldset class="col-md-6">
+      <fieldset class="col-md-6 ">
         <%= f.input :representative, as: :multifile, label: 'Main media' %>
+      </fieldset>
+      <fieldset class="col-md-4 col-md-offset-1">
+        <%= f.input :representative_path, as: :string, placeholder: 'relative file path on server', label: false %>
       </fieldset>
     </div>
 
@@ -16,11 +19,17 @@
       <fieldset class="col-md-6">
         <%= f.input :tei, as: :multifile, label: 'Transcript' %>
       </fieldset>
+      <fieldset class="col-md-4 col-md-offset-1">
+        <%= f.input :tei_path, as: :string, placeholder: 'relative file path on server', label: false %>
+      </fieldset>
     </div>
 
     <div class="row">
       <fieldset class="col-md-6">
         <%= f.input :thumbnail, as: :multifile %>
+      </fieldset>
+      <fieldset class="col-md-4 col-md-offset-1">
+        <%= f.input :thumbnail_path, as: :string, placeholder: 'relative file path on server', label: false %>
       </fieldset>
     </div>
   </fieldset>
